@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<hr>
+<h2 class="alert alert-secondary" style="text-align: center;"> {{ type }} </h2>
+<hr>
+<div class="container" style="padding:60px;">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th style="width:100px"> Sl.no </td>
+                <th style="width:400px"> Notification </td>
+                <th style="width:250px"> Status </td>
+            </tr>
+        </thead>
+        {% for i in notifications %}
+            <tr>
+                <td> {{ i[0] }} </td>
+                <td> {{ i[1] }} </td>
+                <td class="alert alert-success"> Completed </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>    
+
+{% endblock content %}
